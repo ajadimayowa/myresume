@@ -17,14 +17,13 @@ export default function Home() {
     <Container fluid className={`${style.container} p-0 pt-5 min-vh-100 w-100`}>
       <TopBar toggleMenu={handleMenu}/>
       <SideBar show={nav} off={handleMenu}/>
-      <div className={`w-100 mt-4 px-3 py-3`} style={{fontFamily:'Montserrat',marginTop:30}}>
-        <h3 className="" style={{fontFamily:'Montserrat', fontWeight:'700', fontSize:'2em'}}>
-          Driving Innovation <br />
-          through Cutting-Edge <br /> Software Solutions.
+      <div className={`w-100 mt-4 px-4 py-3`} style={{fontFamily:'Montserrat',marginTop:30}}>
+        <h3 className="mt-4" style={{fontFamily:'Montserrat', fontWeight:'700', fontSize:'1.5em', lineHeight:'1.3em'}}>
+          Driving Innovation <br/> through  Cutting-Edge <br/> Software Solutions.
         </h3>
-        <p className="mt-3">
-          Our approach is simple, flexible and easy to use. <br />
-          we know what you need and we know how to <br /> get it done.
+        <p className="mt-2">
+          Our approach is simple, flexible and easy to use. <br/>
+          we know what you need and we know <br/> how to get it done.
         </p>
         <span className="d-flex gap-3 mt-2">
           <Button variant="primary text-light">Services</Button>

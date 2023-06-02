@@ -21,7 +21,7 @@
     z-index: 2;
     display: flex;
     transform: translateX(0);
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .sideBar ul li:hover {
@@ -33,7 +33,7 @@
     top:0;
     z-index: 2;
     display: flex;
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out;
     transform: translateX(100%);
     background-color:#192252;
 }
