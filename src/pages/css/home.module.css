@@ -1,6 +1,9 @@
 .sideBar {
     display: none;
 }
+.offSideBar {
+    display: none;
+}
 .toggler {
     display: none;
 }

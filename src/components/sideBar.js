@@ -13,7 +13,7 @@ const SideBar = ({ show, off }) => {
         <i
           className="bi bi-x-circle"
           onClick={off}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", fontSize:'0.7em' }}
         ></i>
       </h1>
       <ul
