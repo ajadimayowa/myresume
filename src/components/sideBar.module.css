@@ -1,0 +1,7 @@
+.navContainer {
+    background-color: #192252;
+    position: absolute;
+    top:0;
+    z-index: 20;
+    min-height: 50%;
+}

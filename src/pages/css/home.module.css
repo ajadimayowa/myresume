@@ -1,8 +1,44 @@
+.sideBar {
+    display: none;
+}
+.toggler {
+    display: none;
+}
 @media screen and (max-width :768px){
 .container {
     max-width: 100%;
-    min-width: 100%;
-    
+    min-width: 100%; 
+}
+
+.sideBar {
+    height: 70%;
+    position: fixed;
+    top:0;
+    background-color:#192252;
+    z-index: 2;
+    display: flex;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.sideBar ul li:hover {
+    background-color:#6c749d;
+}
+.offSideBar {
+    height: 70%;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    display: flex;
+    transition: all 1s ease-in-out;
+    transform: translateX(100%);
+    background-color:#192252;
+}
+
+.toggler {
+    display: flex;
 }
 }
+
+
 
