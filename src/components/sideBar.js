@@ -13,19 +13,19 @@ const SideBar = ({ show, off }) => {
         <i
           className="bi bi-x-circle"
           onClick={off}
-          style={{ cursor: "pointer", fontSize:'0.7em' }}
+          style={{ cursor: "pointer", fontSize: "0.7em" }}
         ></i>
       </h1>
       <ul
         className="w-100 d-flex flex-column p-0 align-items-center mt-5"
-        style={{ listStyle: "none" }}
+        style={{ listStyle: "none", fontSize:'0.8em' }}
       >
         <li
           className="d-flex w-100 text-center justify-content-center align-items-center"
           style={{ minHeight: "3em" }}
         >
           <a
-            href="#"
+            href="/"
             style={{
               textDecoration: "none",
               color: "#fff",
@@ -68,6 +68,7 @@ const SideBar = ({ show, off }) => {
           </a>
         </li>
 
+       
         <li
           className="d-flex w-100 text-center justify-content-center align-items-center"
           style={{ minHeight: "3em" }}
@@ -83,11 +84,42 @@ const SideBar = ({ show, off }) => {
             About us
           </a>
         </li>
+
+        <li
+          className="d-flex w-100 text-center justify-content-center align-items-center"
+          style={{ minHeight: "3em" }}
+        >
+          <a
+            href="#"
+            style={{
+              textDecoration: "none",
+              color: "#fff",
+              fontFamily: "Montserrat",
+            }}
+          >
+            Start your career in tech
+          </a>
+        </li>
+        <li
+          className="d-flex w-100 text-center justify-content-center align-items-center"
+          style={{ minHeight: "3em" }}
+        >
+          <a
+            href="/ideas"
+            style={{
+              textDecoration: "none",
+              color: "#fff",
+              fontFamily: "Montserrat",
+            }}
+          >
+            See suggested app ideas
+          </a>
+        </li>
+
       </ul>
-<div className="d-flex justify-content-center mt-4">
-<Button style={{maxWidth:'10em'}}>Contact us</Button>
-</div>
-      
+      <div className="d-flex justify-content-center mt-4">
+        <Button style={{ maxWidth: "10em" }}>Contact us</Button>
+      </div>
     </div>
   );
 };
