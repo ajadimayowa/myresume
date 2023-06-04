@@ -110,7 +110,7 @@ export default function Home() {
 
       <div className="w-100 mt-4 px-3">
         <p className="p-3 bg-secondary w-100 text-light">Recently added</p>
-        <table className="table">
+        <table className="table w-100">
           <thead className="thead-dark">
             <tr>
               <th scope="col">#</th>
@@ -161,7 +161,7 @@ export default function Home() {
             ></i>
           </Col>
         </Modal.Header>
-        <Modal.Body >
+        <Modal.Body className="d-flex, justify-content-center" >
         <p className="d-flex text-start text-secondary justify-content-start px-3 w-100 m-0" style={{ fontSize: "0.9em" }}>
             Idea By : {ideas[ideaIndex]?.ownerName}
           </p>
