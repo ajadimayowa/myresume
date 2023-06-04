@@ -128,7 +128,7 @@ export default function Home() {
                 <td>{item?.ownerName}</td>
                 <td>{`${item?.phoneNumber? '+234':''} ${item?.phoneNumber}`}</td>
                 <td>{item?.title}</td>
-                <td>
+                <td className="px-2">
                   <Button
                   onClick={()=>{
                     setDescModal(true)
