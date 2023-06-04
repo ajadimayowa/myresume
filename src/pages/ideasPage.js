@@ -108,10 +108,10 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="w-100 mt-4 px-3">
+      <div className="w-100 mt-3">
         <p className="p-3 bg-secondary w-100 text-light">Recently added</p>
-        <table className="table w-100">
-          <thead className="thead-dark">
+        <table className="table">
+          <thead className="" style={{backgroundColor:'red'}}>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
@@ -121,7 +121,7 @@ export default function Home() {
 
             </tr>
           </thead>
-          <tbody>
+          <tbody className="w-100 px-3 bg-danger">
             {ideas.map((item, index) => (
               <tr key={index} className="bg-danger">
                 <th scope="row">{index + 1}</th>

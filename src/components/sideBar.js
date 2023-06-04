@@ -1,8 +1,10 @@
 import { Button, Col, Row } from "react-bootstrap";
 import logo from "../assets/images/floatlogo.png";
 import styles from "../pages/css/home.module.css";
+import { useNavigate } from "react-router-dom";
 
 const SideBar = ({ show, off }) => {
+  const navigate = useNavigate()
   return (
     <div
       className={`${
@@ -105,8 +107,10 @@ const SideBar = ({ show, off }) => {
           style={{ minHeight: "3em" }}
         >
           <a
-            href="/ideas"
+          
+            onClick={()=>navigate('/ideas')}
             style={{
+              cursor:'pointer',
               textDecoration: "none",
               color: "#fff",
               fontFamily: "Montserrat",
