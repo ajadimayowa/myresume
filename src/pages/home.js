@@ -89,7 +89,7 @@ export default function Home() {
         <span className="d-flex gap-3 mt-2">
           <Button variant="primary text-light">Our Services</Button>
           <Button variant="secondary" onClick={handleQuote}>
-            Suggest an app idea
+            Suggest app
           </Button>
           {/* ${description.icon} */}
         </span>
