@@ -90,6 +90,13 @@ export default function Home() {
 
   return (
     <Container fluid className={`${style.container} p-0 pt-5 min-vh-100 w-100`}>
+      <div className={`${style.webView} p-0 pt-5 min-vh-100 w-100`}>
+        <h1 className="px-5">The page you are looking for is currently available for mobile screens at this time, pls access the link
+          from your mobile phone while we are woking on the desktop view
+        </h1>
+      </div>
+
+      <div className={`${style.mobileView} p-0 pt-5 min-vh-100 w-100`}>
       <TopBar toggleMenu={handleMenu} />
       <SideBar show={nav} off={handleMenu} />
       <div
@@ -453,6 +460,8 @@ export default function Home() {
       >
         All Right Reserved Floath Solution Hub 2023
       </div>
+      </div>
+      
     </Container>
   );
 }
