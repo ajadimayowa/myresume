@@ -142,7 +142,7 @@ export default function Home() {
         </span>
       </div>
       <div className={`${style.homeImage} justify-content-center mt-5 w-100`}>
-        <img src={homeBg} alt="home image" height={620} width={"100%"} />
+        <img src={homeBg} alt="home image" height={600} width={"100%"} />
       </div>
       <div
         className="d-flex w-100 gap-2 px-3 p-3 align-items-center "
@@ -290,7 +290,7 @@ export default function Home() {
           </Card>
         </div>
       </div>
-      <Modal show={quoteModal} centered backdrop="static" size="sm" className="p-5">
+      <Modal show={quoteModal} centered backdrop="static" size="sm" className="p-2">
         <Modal.Header className="bg-secondary text-light">
           <Col style={{fontSize:'0.9em'}}>Request Resumee</Col>
           <Col className="d-flex justify-content-end">

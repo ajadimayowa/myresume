@@ -15,8 +15,8 @@ const TopBar = ({toggleMenu}) => {
         backgroundColor: "#fff",
       }}
     >
-      <div className="d-flex align-items-center ">
-        <h3 style={{fontFamily:'Montserrat', fontWeight:700, fontSize:'1rem'}}>M-SA</h3>
+      <div className="d-flex align-items-center w-50 ">
+        <h3 className="w-100" style={{fontFamily:'Montserrat', fontWeight:700, fontSize:'1rem'}}>M-SA</h3>
       </div>
       <div className={`d-flex w-100 align-items-center justify-content-end`}>
         <i
