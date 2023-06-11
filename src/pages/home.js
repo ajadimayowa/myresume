@@ -96,7 +96,7 @@ export default function Home() {
         className={`w-100 mt-4 px-4 py-3`}
         style={{ fontFamily: "Montserrat", marginTop: 30 }}
       >
-        <p className="text-center text-prmary w-100 m-0 p-0 mt-4">
+        <p className="text-center text-primary w-100 m-0 p-0 mt-4">
           Hello There! I'm
         </p>
         <h3
