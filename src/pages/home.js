@@ -33,6 +33,15 @@ export default function Home() {
     "LOAN24/7",
   ];
 
+  const tools = [
+    "FlexipGroup",
+    "Surplusfood",
+    "floathhub",
+    "TrovestCapital",
+    "XpressMedika",
+    "LOAN24/7",
+  ];
+
   const stacks = [
     "FlexipGroup",
     "Surplusfood",
@@ -172,13 +181,13 @@ export default function Home() {
       </h3>
 
       <div
-        className="d-flex flex-column w-100 gap-2 px-3 p-3 align-items-center bg-danger "
+        className="d-flex flex-column w-100 gap-2 px-3 p-3 align-items-center"
         style={{
           fontSize: 14
         }}
       >
         {stacks?.map((brand) => (
-         <div className="rounded" style={{minHeight:'20rem',minWidth:'90%', backgroundColor:'#F5F5F5'}}></div>
+         <div className="rounded shadow-sm" style={{minHeight:'20rem',minWidth:'90%', backgroundColor:'#F5F5F5'}}></div>
         ))}
       </div>
 
@@ -186,14 +195,13 @@ export default function Home() {
         <h3>Other Tools I use</h3>
       </div>
       <div
-        className="d-flex flex-column mt-3 w-100 px-3 gap-3"
-        style={{ backgroundColor: "#F1F8F9" }}
+        className="d-flex flex-wrap w-100 mt-3 w-100 px-3 gap-3"
+        
       >
-        {serviceDescriptions.map((description, index) => (
-          <div key={index}>
-            <i className="bi bi-alarm"></i>
-            <p>{description.title}</p>
-            <p>{description.descriptions}</p>
+        {tools.map((description, index) => (
+          <div className="rounded rounded-5 p-3" key={index} style={{minHeight:'2em', minWidth:'10em', backgroundColor:'#7A0D0C'}}>
+            
+            <p className="p-0 m-0">{description.descriptions}</p>
           </div>
         ))}
       </div>
