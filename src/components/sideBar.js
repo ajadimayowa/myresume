@@ -38,7 +38,7 @@ const SideBar = ({ show, off }) => {
           </a>
         </li>
 
-        <li
+        {/* <li
           className="d-flex w-100 text-center justify-content-center align-items-center"
           style={{ minHeight: "3em" }}
         >
@@ -68,7 +68,7 @@ const SideBar = ({ show, off }) => {
           >
             Products
           </a>
-        </li>
+        </li> */}
 
        
         <li
@@ -83,11 +83,11 @@ const SideBar = ({ show, off }) => {
               fontFamily: "Montserrat",
             }}
           >
-            About us
+            About Me
           </a>
         </li>
 
-        <li
+        {/* <li
           className="d-flex w-100 text-center justify-content-center align-items-center"
           style={{ minHeight: "3em" }}
         >
@@ -118,11 +118,11 @@ const SideBar = ({ show, off }) => {
           >
             See suggested app ideas
           </a>
-        </li>
+        </li> */}
 
       </ul>
       <div className="d-flex justify-content-center mt-4">
-        <Button style={{ maxWidth: "10em" }}>Contact us</Button>
+      <Button variant="primary text-light"><a href="https://wa.me/message/NSIQY7RHQ2W4C1" style={{textDecoration:'none', color:'#fff'}}>Contact me</a></Button>
       </div>
     </div>
   );

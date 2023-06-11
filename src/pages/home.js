@@ -126,7 +126,7 @@ export default function Home() {
           className="mt-2 text-center px-4"
           style={{ fontSize: 14, fontFamily: "Montserrat" }}
         >
-          An highly skilled software developer with years of experience in
+          A skilled software developer with years of experience in
           designing, creating, and maintaining computer software. <br /> <br />I
           have expertise in programming languages and frameworks, which allows
           me to write code that meets specific requirements and solves <br />{" "}
@@ -136,13 +136,13 @@ export default function Home() {
           className="d-flex gap-3 mt-2 justify-content-center"
           style={{ fontFamily: "Myfont" }}
         >
-          <Button variant="secondary text-light">Contact me</Button>
-          <Button variant="primary">Request Resumee</Button>
+          <Button variant="secondary text-light"><a href="https://wa.me/message/NSIQY7RHQ2W4C1" style={{textDecoration:'none', color:'#fff'}}>Contact me</a></Button>
+          <Button variant="primary" onClick={()=>setQuoteModal(true)}>Request Resumee</Button>
           {/* ${description.icon} */}
         </span>
       </div>
       <div className={`${style.homeImage} justify-content-center mt-5 w-100`}>
-        <img src={homeBg} alt="home image" height={650} width={"100%"} />
+        <img src={homeBg} alt="home image" height={620} width={"100%"} />
       </div>
       <div
         className="d-flex w-100 gap-2 px-3 p-3 align-items-center "
@@ -290,9 +290,9 @@ export default function Home() {
           </Card>
         </div>
       </div>
-      <Modal show={quoteModal} centered backdrop="static">
+      <Modal show={quoteModal} centered backdrop="static" size="sm" className="p-5">
         <Modal.Header className="bg-secondary text-light">
-          <Col></Col>
+          <Col style={{fontSize:'0.9em'}}>Request Resumee</Col>
           <Col className="d-flex justify-content-end">
             <i
               className="bi bi-x-circle"
@@ -302,18 +302,7 @@ export default function Home() {
           </Col>
         </Modal.Header>
         <Modal.Body>
-          <p className="text-danger px-3" style={{ fontSize: "0.7em" }}>
-            <strong>Heads up! :</strong>{" "}
-            <i className="text-secondary">
-              Do well to put your contact information, your idea might <br />{" "}
-              just be so good to intrest an investor, you never know. Once you
-              submit, go to app sugestions page to see your contribution.
-            </i>
-            <i
-              className="bi bi-emoji-smile-fill  m-2 text-secondary"
-              style={{ color: "#E79C3D" }}
-            ></i>
-          </p>
+         
           <hr />
           <Formik
             initialValues={initialValues}
@@ -325,7 +314,7 @@ export default function Home() {
               <form
                 onSubmit={handleSubmit}
                 className="d-flex flex-column gap-3"
-                style={{ fontFamily: "Montserrat" }}
+                style={{ fontFamily: "Montserrat", fontSize:'0.9em' }}
               >
                 <Form.Group
                   className="border border-1 rounded px-1"
@@ -337,7 +326,7 @@ export default function Home() {
                     onChange={handleChange}
                     placeholder="Your name"
                     className="border border-0 px-2 py-1 bg-transparent"
-                    style={{ outline: "none" }}
+                    style={{ outline: "none",fontSize:'0.9em' }}
                   />
                 </Form.Group>
 
@@ -351,7 +340,7 @@ export default function Home() {
                     name="email"
                     placeholder="Email"
                     className="border border-0 px-2 py-1 bg-transparent"
-                    style={{ outline: "none" }}
+                    style={{ outline: "none",fontSize:'0.9em' }}
                   />
                 </Form.Group>
 
@@ -363,9 +352,9 @@ export default function Home() {
                     name="title"
                     id="userName"
                     onChange={handleChange}
-                    placeholder="Your app title"
+                    placeholder="Purpose of request"
                     className="border border-0 px-2 py-1 bg-transparent"
-                    style={{ outline: "none" }}
+                    style={{ outline: "none",fontSize:'0.9em' }}
                   />
                 </Form.Group>
 
@@ -373,9 +362,9 @@ export default function Home() {
                   <textarea
                     onChange={handleChange}
                     name="description"
-                    placeholder="Briefly describe what your web app or mobile app should do"
+                    placeholder="Type in other documents you need me to send."
                     className="border w-100 border-0 px-2 py-1 bg-transparent"
-                    style={{ outline: "none", minHeight: "15rem" }}
+                    style={{ outline: "none", minHeight: "7rem",fontSize:'0.9em' }}
                   />
                 </Form.Group>
 
@@ -390,22 +379,24 @@ export default function Home() {
                     onChange={handleChange}
                     placeholder="Phone number (optional)"
                     className="border border-0 px-2 py-1 bg-transparent"
-                    style={{ outline: "none" }}
+                    style={{ outline: "none",fontSize:'0.9em' }}
                   />
                 </Form.Group>
 
-                <span className="d-flex gap-2 mt-2">
+                <span className="d-flex gap-2 mt-2" >
                   <Button
                     disabled={Object.keys(errors).length > 0}
                     variant="secondary text-light"
                     type="submit"
                     onClick={() => handleSubmit}
+                    style={{fontSize:'0.9em'}}
                   >
-                    Send Quote
+                    Done
                   </Button>
                   <Button
                     variant="light border"
                     onClick={() => setQuoteModal(false)}
+                    style={{fontSize:'0.9em'}}
                   >
                     Cancel
                   </Button>
@@ -416,7 +407,7 @@ export default function Home() {
         </Modal.Body>
       </Modal>
 
-      <Modal show={quoteSucModal} centered backdrop="static">
+      <Modal show={quoteSucModal} centered backdrop="static" size="sm" className="p-4">
         <Modal.Header className="bg-secondary text-light">
           <Col>Success!! </Col>
           <Col className="d-flex justify-content-end">
@@ -433,9 +424,7 @@ export default function Home() {
               className="text-secondary text-center px-3"
               style={{ fontSize: "0.9em" }}
             >
-              Thank you for your contribution, do well to talk to us if you ever
-              need a website for your business or you need to build a mobile
-              application.
+              Thank you for your intrest in my expertise, i will reach out to you shortly.
             </p>
             <i
               className="bi bi-emoji-smile-fill text-secondary"
@@ -453,7 +442,7 @@ export default function Home() {
             <p className="px-2 m-0 ml-2">
               {" "}
               <i className="bi bi-envelope-fill text-primary ml-2"></i>{" "}
-              floathhub@gmail.com
+              ajadimayowa879@gmail.com
             </p>
           </div>
         </Modal.Body>
