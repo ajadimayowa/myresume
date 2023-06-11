@@ -1,13 +1,14 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/mixins";
 
-$primary : #2AB7C8;
+$primary : #5E49A4;
 $secondary : #192252;
 
 
 @import "../node_modules/bootstrap/scss/variables.scss";
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');

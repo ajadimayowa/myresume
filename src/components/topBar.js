@@ -7,7 +7,7 @@ const TopBar = ({toggleMenu}) => {
   const navigate = useNavigate();
   return (
     <div
-      className="d-flex m-0 w-100 shadow-sm px-3"
+      className="d-flex m-0 mb-5 w-100 shadow-sm px-3 bg-dark text-light"
       style={{
         minHeight: "4rem",
         position: "fixed",
@@ -15,8 +15,8 @@ const TopBar = ({toggleMenu}) => {
         backgroundColor: "#fff",
       }}
     >
-      <div className="d-flex align-items-center">
-        <img src={logo} alt="comp logo" height={48} onClick={()=>navigate('/')}/>
+      <div className="d-flex align-items-center ">
+        <h3 style={{fontFamily:'Montserrat', fontWeight:700, fontSize:'1rem'}}>M-SA</h3>
       </div>
       <div className={`d-flex w-100 align-items-center justify-content-end`}>
         <i

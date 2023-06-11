@@ -14,7 +14,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import style from "./css/home.module.css";
 import TopBar from "../components/topBar";
-import homeBg from "../assets/images/home-image.png";
+import homeBg from "../assets/images/homeImage.png";
 import { serviceDescriptions } from "../assets/contents";
 import SideBar from "../components/sideBar";
 import { postQuotes } from "../controllers/requests";
@@ -24,6 +24,23 @@ import { updateUser } from "../store/slices/authSlice";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const brands = [
+    "FlexipGroup",
+    "Surplusfood",
+    "floathhub",
+    "TrovestCapital",
+    "XpressMedika",
+    "LOAN24/7",
+  ];
+
+  const stacks = [
+    "FlexipGroup",
+    "Surplusfood",
+    "floathhub",
+    "TrovestCapital",
+    "XpressMedika",
+    "LOAN24/7",
+  ];
   const navigate = useNavigate();
   const initialValues = {
     userName: "",
@@ -70,42 +87,104 @@ export default function Home() {
         className={`w-100 mt-4 px-4 py-3`}
         style={{ fontFamily: "Montserrat", marginTop: 30 }}
       >
+        <p className="text-center text-prmary w-100 m-0 p-0 mt-4">
+          Hello There! I'm
+        </p>
         <h3
-          className="mt-4"
+          className="text-center mt-3 mb-0"
           style={{
-            fontFamily: "Montserrat",
+            fontFamily: "Myfont",
             fontWeight: "700",
-            fontSize: "1.5em",
-            lineHeight: "1.3em",
+            fontSize: 40,
+            lineHeight: "1.2em",
           }}
         >
-          Driving Innovation <br /> through Cutting-Edge <br /> Software
-          Solutions.
+          MAYOWA <br /> SAMUEL <br /> AJADI
         </h3>
-        <p className="mt-2">
-          Our approach is simple, flexible and easy to use. <br />
-          we know what you need and we know <br /> how to get it done.
+        <p
+          className="text-center text-prmary w-100 m-0 p-0"
+          style={{
+            fontFamily: "Montserrat",
+            fontWeight: 400,
+            fontSize: "0.8em",
+          }}
+        >
+          (BTech Computer Engineering) <br/>
+          +2348166064166 | samtalktech@outlook.com
         </p>
-        <span className="d-flex gap-3 mt-2">
-          <Button variant="primary text-light">Our Services</Button>
-          <Button variant="secondary" onClick={handleQuote}>
-            Suggest app
-          </Button>
+        <hr />
+        <p
+          className="mt-2 text-center px-4"
+          style={{ fontSize: 14, fontFamily: "Montserrat" }}
+        >
+          An highly skilled software developer with years of experience in
+          designing, creating, and maintaining computer software. <br /> <br />I
+          have expertise in programming languages and frameworks, which allows
+          me to write code that meets specific requirements and solves <br />{" "}
+          complex problems
+        </p>
+        <span
+          className="d-flex gap-3 mt-2 justify-content-center"
+          style={{ fontFamily: "Myfont" }}
+        >
+          <Button variant="secondary text-light">Contact me</Button>
+          <Button variant="primary">Request Resumee</Button>
           {/* ${description.icon} */}
         </span>
       </div>
-      <div className="d-flex justify-content-center mt-5 w-100">
-        <img src={homeBg} alt="home image" height={469} />
+      <div className={`${style.homeImage} justify-content-center mt-5 w-100`}>
+        <img src={homeBg} alt="home image" height={650} width={"100%"} />
       </div>
-      <span className="d-flex justify-content-center mt-3">
-        <Button
-          variant="secondary text-light"
-          onClick={() => navigate("/ideas")}
-        >
-          {" "}
-          See Suggested App Ideas
-        </Button>
-      </span>
+      <div
+        className="d-flex w-100 gap-2 px-3 p-3 align-items-center "
+        style={{
+          fontSize: 14,
+          fontFamily: "Montserrat",
+          minHeight: "5rem",
+          lineHeight: "3rem",
+          backgroundColor: "#F5F5F5",
+          flexWrap: "wrap",
+        }}
+      >
+        {brands?.map((brand) => (
+          <p
+            className="p-0 m-0"
+            style={{
+              fontFamily: "Myfont",
+              fontSize: "1.5rem",
+              color: "#868688",
+            }}
+          >
+            {brand}
+          </p>
+        ))}
+      </div>
+
+      <h3
+        className="mt-5 mb-5 px-3 mb-0 text-primary"
+        style={{
+          fontFamily: "Myfont",
+          fontWeight: "700",
+          lineHeight: "1.2em",
+        }}
+      >
+        Below are The Stacks I use as at the time you are seeing this.
+      </h3>
+
+      <div
+        className="d-flex flex-column w-100 gap-2 px-3 p-3 align-items-center bg-danger "
+        style={{
+          fontSize: 14
+        }}
+      >
+        {stacks?.map((brand) => (
+         <div className="rounded" style={{minHeight:'20rem',minWidth:'90%', backgroundColor:'#F5F5F5'}}></div>
+        ))}
+      </div>
+
+      <div className="w-100 mt-4 px-3">
+        <h3>Other Tools I use</h3>
+      </div>
       <div
         className="d-flex flex-column mt-3 w-100 px-3 gap-3"
         style={{ backgroundColor: "#F1F8F9" }}
@@ -218,9 +297,9 @@ export default function Home() {
           <p className="text-danger px-3" style={{ fontSize: "0.7em" }}>
             <strong>Heads up! :</strong>{" "}
             <i className="text-secondary">
-              Do well to put your contact information, your idea might <br /> just be
-              so good to intrest an investor, you never know. Once you submit,
-              go to app sugestions page to see your contribution.
+              Do well to put your contact information, your idea might <br />{" "}
+              just be so good to intrest an investor, you never know. Once you
+              submit, go to app sugestions page to see your contribution.
             </i>
             <i
               className="bi bi-emoji-smile-fill  m-2 text-secondary"
@@ -297,7 +376,7 @@ export default function Home() {
                   style={{ maxWidth: "16em", zIndex: 50 }}
                 >
                   <Form.Control
-                  type="number"
+                    type="number"
                     name="phoneNumber"
                     id="phoneNumber"
                     onChange={handleChange}
@@ -329,9 +408,9 @@ export default function Home() {
         </Modal.Body>
       </Modal>
 
-      <Modal show={quoteSucModal}  centered backdrop="static">
+      <Modal show={quoteSucModal} centered backdrop="static">
         <Modal.Header className="bg-secondary text-light">
-          <Col>Success!!  </Col>
+          <Col>Success!! </Col>
           <Col className="d-flex justify-content-end">
             <i
               className="bi bi-x-circle"
@@ -340,24 +419,34 @@ export default function Home() {
             ></i>
           </Col>
         </Modal.Header>
-        <Modal.Body >
+        <Modal.Body>
           <div className="d-flex flex-column align-items-center">
-          <p className="text-secondary text-center px-3" style={{ fontSize: "0.9em" }}>
-            Thank you for your contribution, do well to talk to us if you ever need a
-            website for your business or you need to build a mobile application.
-          </p>
-          <i
-            className="bi bi-emoji-smile-fill text-secondary"
-            style={{ color: "#E79C3D", fontSize:'2rem' }}
-          ></i>
+            <p
+              className="text-secondary text-center px-3"
+              style={{ fontSize: "0.9em" }}
+            >
+              Thank you for your contribution, do well to talk to us if you ever
+              need a website for your business or you need to build a mobile
+              application.
+            </p>
+            <i
+              className="bi bi-emoji-smile-fill text-secondary"
+              style={{ color: "#E79C3D", fontSize: "2rem" }}
+            ></i>
           </div>
-          
+
           <hr />
           <div className="d-flex justify-content-center w-100 align-items-center">
-          
-          <p className="px-2 m-0"> <i className="bi bi-telephone-fill text-primary"></i> 08166064166</p> |
-          
-          <p className="px-2 m-0 ml-2"> <i className="bi bi-envelope-fill text-primary ml-2"></i>{' '}floathhub@gmail.com</p>
+            <p className="px-2 m-0">
+              {" "}
+              <i className="bi bi-telephone-fill text-primary"></i> 08166064166
+            </p>{" "}
+            |
+            <p className="px-2 m-0 ml-2">
+              {" "}
+              <i className="bi bi-envelope-fill text-primary ml-2"></i>{" "}
+              floathhub@gmail.com
+            </p>
           </div>
         </Modal.Body>
       </Modal>
