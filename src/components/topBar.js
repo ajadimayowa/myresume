@@ -13,6 +13,7 @@ const TopBar = ({toggleMenu}) => {
         position: "fixed",
         top: 0,
         backgroundColor: "#fff",
+        zIndex:10
       }}
     >
       <div className="d-flex align-items-center w-50 ">
