@@ -12,11 +12,7 @@
         opacity: 1;
     }
     
-}
-
-.mobileView {
-    display: none;
-}
+}   
 
 .sideBar {
     display: none;
@@ -29,6 +25,15 @@
 }
 .homeImage {display: none}
 
+.mobileIntro {
+    display: none;
+}
+.desktopIntro{
+    display: flex;
+}
+.mobilePotfolio {
+    display: none;
+}
 
 @media screen and (max-width :768px){
 .container {
@@ -42,16 +47,26 @@
     display: flex;
     flex-direction: column;
 }
-
+.mobileIntro {
+    display: block;
+}
+.desktopIntro{
+    display: none;
+}
 .webView {
     display: none;
+}
+
+
+.mobilePotfolio {
+    display: flex;
 }
 
 .sideBar {
     height: 70%;
     position: fixed;
     top:0;
-    background-color:#192252;
+    background-color:#01065B;
     z-index: 2;
     display: flex;
     transform: translateX(0);

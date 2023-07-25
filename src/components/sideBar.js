@@ -9,7 +9,7 @@ const SideBar = ({ show, off }) => {
     <div
       className={`${
         show ? styles.sideBar : styles.offSideBar
-      } flex-column text-light m-0 w-100 shadow-sm`}
+      } flex-column text-light  m-0 w-100 shadow-sm`}
     >
       <h1 className="w-100  p-3 px-4 text-end">
         <i

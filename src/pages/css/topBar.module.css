@@ -1,0 +1,58 @@
+@font-face {
+    font-family: MyFont;
+    src: url('../../assets//fonts/Myanmar\ MN.ttf');
+  }
+
+@keyframes opacityShow {
+    0%  {
+        opacity: 0;
+    }
+
+    100%  {
+        opacity: 1;
+    }
+    
+}   
+
+.topBar {
+   background-color: #01065B;
+   height: 250px;
+   display: flex;
+}
+
+.desktopHeader{
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+ }
+
+.topBarMobile {
+    display: none;
+}
+
+@media screen and (max-width :768px){
+    .topBar {
+       height: 64px;
+        background-color: #01065B;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 20,
+     }
+    
+     .desktopHeader{
+        display: flex;
+     }
+
+     .desktopTitle {
+        display: none;
+     }
+
+     .topBarMobile {
+        display: flex;
+    }
+}
+
+
+
